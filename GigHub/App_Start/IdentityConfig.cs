@@ -86,6 +86,22 @@ namespace GigHub
             }
             return manager;
         }
+
+        public override Task<bool> IsEmailConfirmedAsync(string userId)
+        {
+
+            
+            return base.IsEmailConfirmedAsync(userId);
+        }
+
+        internal async Task<bool> IsPotwierdzoneConfirmedAsync(string userId)
+        {
+
+            var user = await FindByIdAsync(userId);
+            var name = user.Name;
+
+            return true;
+        }
     }
 
     // Configure the application sign-in manager which is used in this application.

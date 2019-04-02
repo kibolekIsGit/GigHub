@@ -73,7 +73,11 @@ namespace GigHub.Controllers
             {
                 return View(model);
             }
+            var user = await UserManager.FindByNameAsync(model.Email);
+            var czyaktywny=UserManager.IsPotwierdzoneConfirmedAsync(user.Id);
 
+
+           var ifjest= UserManager.IsEmailConfirmedAsync(user.Id);
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
