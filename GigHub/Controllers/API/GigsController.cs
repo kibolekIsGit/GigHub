@@ -16,7 +16,7 @@ namespace GigHub.Controllers.API
 
         public GigsController()
         {
-            _context = new ApplicationDbContext();
+            _context = new ApplicationDbContext();   
         }
 
         [HttpDelete]
