@@ -11,6 +11,14 @@
                 </li>*@
             @*<li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>*@
 
+            <li class="notifications">
+                <a href="#">
+                    <i class="glyphicon glyphicon-globe"></i>
+                    <span class="badge js-notifications-count hide"></span>
+
+                </a>
+
+            </li>
             <li class="dropdown">
                 <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     @User.Identity.GetUserName()<span class="caret"></span>
